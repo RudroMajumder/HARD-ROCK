@@ -18,17 +18,17 @@ const searchSongs = () => {
 }
 
 const showSong = songs =>{
-    if(songs.title == null){
-        const alertContainer = document.getElementById('alert');
-        const alertDiv = document.createElement('div');
-        alertDiv.className = 'alert';
-        const alertMessage = `
-            <p class="alertMessage"> OOPS! Song Not FOund </p>
-        `;
-        alertDiv.innerHTML = alertMessage;
-        alertContainer.appendChild(alertDiv);
-    }
-    else{
+    // if(songs.title == ''){
+    //     const alertContainer = document.getElementById('alert');
+    //     const alertDiv = document.createElement('div');
+    //     alertDiv.className = 'alert';
+    //     const alertMessage = `
+    //         <p class="alertMessage"> OOPS! Song Not FOund </p>
+    //     `;
+    //     alertDiv.innerHTML = alertMessage;
+    //     alertContainer.appendChild(alertDiv);
+    // }
+    // else{
         const songContainer = document.getElementById('song-container');
         songs.forEach(song => {
             const songDiv = document.createElement('div');
@@ -48,7 +48,7 @@ const showSong = songs =>{
             `;
             songContainer.appendChild(songDiv);
         });
-    }
+    // }
 }
 const showLyrics = async (artist,title) =>{
     document.getElementById('song-lyrics').innerText = '';
